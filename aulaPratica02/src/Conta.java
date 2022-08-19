@@ -17,11 +17,9 @@ public class Conta {
 
     public boolean debitaSaldo(float valorDebitado){
         if(valorDebitado > this.saldo){
-            System.out.println("Valor não debitado por falta de saldo.");
             return false;
         } else {
             this.setSaldo(saldo -= valorDebitado);
-            System.out.println("Valor debitado.");
             return true;
         }
     }
@@ -45,8 +43,8 @@ public class Conta {
     @Override
     public String toString() {
         return "Conta{" +
-                "numero=" + numero +
-                ", saldo=" + saldo +
+                "Numero=" + numero +
+                ", Saldo=" + saldo +
                 '}';
     }
 }

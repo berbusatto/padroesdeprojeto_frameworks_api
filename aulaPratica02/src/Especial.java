@@ -10,7 +10,14 @@ public class Especial extends Conta{
     public Especial(){
 
     }
-
+    @Override
+    public boolean debitaSaldo(float valorDebitado){
+       boolean aux = valorDebitado > (this.getSaldo() + this.getLimite());
+            if(!aux){
+                 this.setSaldo(getSaldo() - valorDebitado);
+            }
+        return aux;
+    }
     public float getLimite() {
         return limite;
     }
