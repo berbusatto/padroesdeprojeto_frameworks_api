@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PADROES_FW_API.iml" filepath="$PROJECT_DIR$/PADROES_FW_API.iml" />
       <module fileurl="file://$PROJECT_DIR$/aulaPratica02/aulaPratica02.iml" filepath="$PROJECT_DIR$/aulaPratica02/aulaPratica02.iml" />
+      <module fileurl="file://$PROJECT_DIR$/trabalho02/trabalho02.iml" filepath="$PROJECT_DIR$/trabalho02/trabalho02.iml" />
     </modules>
   </component>
 </project>
