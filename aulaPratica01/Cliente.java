@@ -1,4 +1,4 @@
-package aula_pratica01;
+package aulaPratica01;
 
 public class Cliente {
     private String cpf;

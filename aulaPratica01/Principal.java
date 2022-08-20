@@ -1,4 +1,4 @@
-package aula_pratica01;
+package aulaPratica01;
 import java.util.Scanner;
 
 public class Principal {
