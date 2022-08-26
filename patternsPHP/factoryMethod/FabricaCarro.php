@@ -1,0 +1,9 @@
+<?php
+require_once ('Fabrica.php');
+require_once ('Carro.php');
+
+class FabricaCarro extends Fabrica{    
+    function criaVeiculo() : Veiculo {
+        return new Carro;
+    }
+}
