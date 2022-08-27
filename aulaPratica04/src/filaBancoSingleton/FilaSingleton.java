@@ -4,9 +4,10 @@ import java.util.ArrayList;
 
 public class FilaSingleton {
     private static FilaSingleton instancia;
-    private ArrayList<Usuario> filaUsuario = new ArrayList<>();
+    private ArrayList<Usuario> filaUsuario;
 
     private FilaSingleton() {
+        filaUsuario = new ArrayList<>();
     }
 
     public static FilaSingleton getInstancia() {
