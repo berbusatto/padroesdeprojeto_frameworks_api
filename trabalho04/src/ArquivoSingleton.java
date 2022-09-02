@@ -8,13 +8,25 @@ public class ArquivoSingleton {
 
     private ArquivoSingleton(){
         arquivo = new File("txt/Teste.txt");
+
+        if(!arquivo.exists()){
+            try{
+                this.arquivo.createNewFile();
+            } catch (Exception e){
+                System.out.println(e.getMessage());
+            }
+        }
+
     }
 
+
+
     public static ArquivoSingleton getInstance(){
-        if(!arquivo.exists()){
-            new ArquivoSingleton();
+
+        if (instance == null){
+            instance = new ArquivoSingleton();
         }
-        return arquivo;
+        return instance;
     }
 
 
