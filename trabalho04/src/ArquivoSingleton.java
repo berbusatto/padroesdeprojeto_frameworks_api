@@ -1,51 +1,55 @@
+
+
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 
 public class ArquivoSingleton {
-    private static ArquivoSingleton instance;
+
     private File arquivo;
+    private FileWriter fileW;
+    private BufferedWriter bufferW;
 
-    private ArquivoSingleton(){
-        arquivo = new File("Teste.txt");
+    private static ArquivoSingleton instancia;
 
-        if(!arquivo.exists()){
-            try{
+
+    private ArquivoSingleton() {   //CONSTRUTOR
+
+        arquivo = new File("txt/Teste.txt");
+
+        if (!arquivo.exists()){
+            try {
                 this.arquivo.createNewFile();
-            } catch (Exception e){
+            } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
         }
-
     }
 
+    public static ArquivoSingleton getInstancia(){
 
-
-    public static ArquivoSingleton getInstance(){
-
-        if (instance == null){
-            instance = new ArquivoSingleton();
+        if(instancia == null){
+            instancia = new ArquivoSingleton();
         }
-        return instance;
+        return instancia;
     }
-
 
     public void gravaArquivo(String texto) {
-        FileWriter fileW;
-        BufferedWriter bufferW;
-
         try {
-            fileW     = new FileWriter(arquivo, true );
-            bufferW   = new BufferedWriter(fileW);
+            this.fileW     = new FileWriter(arquivo, true );
+            this.bufferW   = new BufferedWriter(fileW);
 
-            bufferW.write(texto);
-            bufferW.newLine();
+            this.bufferW.write(texto);
+            this.bufferW.newLine();
 
-            bufferW.close();
-            fileW.close();
+            this.bufferW.close();
+            this.fileW.close();
         }
-        catch (Exception e) {
+        catch (Exception e) { // PEGA UMA EXCESS //'e' E UM OBJETO
             System.out.println(e.getMessage());
         }
     }
+
+
+
 }
