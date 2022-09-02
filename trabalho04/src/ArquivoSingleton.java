@@ -7,7 +7,7 @@ public class ArquivoSingleton {
     private File arquivo;
 
     private ArquivoSingleton(){
-        arquivo = new File("txt/Teste.txt");
+        arquivo = new File("Teste.txt");
 
         if(!arquivo.exists()){
             try{
