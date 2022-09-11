@@ -19,7 +19,7 @@ public class Principal {
         telArray.add(tel2);
 
         Pessoa p1 = new Pessoa("Bernardo", "Busatto", 21,01, 1991, end1, telArray);
-        System.out.println(p1.toString());
+        System.out.println(p1);
 
     }
 }
