@@ -14,13 +14,14 @@ public class Main {
 
         int cargoB = 2;
         int anoContratacaoB = 1999;
-        String nomeB = "Dilermando", emailB = "diler@yhaaa.com";
+        String nomeB = "Dilermando", emailB = "dilermandoreis@ibest.com.br";
         System.out.println(emp1.toString());
 
         Empregado emp2 = factory.getEmpregado(cargoB, nomeB, emailB, anoContratacaoB);
         System.out.println(emp2.toString());
 
-        System.out.println(emp1);
-        System.out.println(emp2);
+        // Não consigo usar o método de Gerente setSalario(), pois o objeto foi criado como Empregado.
+        //emp1.setSalario(10000f);
+
     }
 }
