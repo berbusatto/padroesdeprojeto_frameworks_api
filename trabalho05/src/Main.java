@@ -20,8 +20,7 @@ public class Main {
         Empregado emp2 = factory.getEmpregado(cargoB, nomeB, emailB, anoContratacaoB);
         System.out.println(emp2.toString());
 
-        // Não consigo usar o método de Gerente setSalario(), pois o objeto foi criado como Empregado.
-        //emp1.setSalario(10000f);
+        // Não consigo usar o método de Gerente setSalario(), pois o objeto foi criado como
 
     }
 }
