@@ -7,15 +7,6 @@ public class Pessoa {
     private Endereco endereco;
     private List telefones = new ArrayList();
 
-    public Pessoa(String nome, String sobrenome, int dia, int mes, int ano, Endereco endereco, List<Telefone> telefones) {
-        this.nome = nome;
-        this.sobrenome = sobrenome;
-        this.dia = dia;
-        this.mes = mes;
-        this.ano = ano;
-        this.endereco = endereco;
-        this.telefones.add(telefones);
-    }
 
     public String getNome() {
         return nome;
