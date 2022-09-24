@@ -4,7 +4,7 @@ import java.util.List;
 public class PessoaBuilder {
     private Pessoa pessoa;
     private Endereco endereco;
-    private List telefones = new ArrayList<>();
+    private List telefones;
 
     public PessoaBuilder(){
         this.pessoa = new Pessoa();
