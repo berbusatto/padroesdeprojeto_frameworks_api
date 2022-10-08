@@ -1,9 +1,9 @@
+package JUNIT.JUNIT.src.test.java;
 
 import org.junit.*;
-import org.junit.Test;
-import aplicacao.Calcula;
 
 public class CalculaTeste {
+
 
     @Test
     public void testeSoma() {
@@ -46,4 +46,19 @@ public class CalculaTeste {
     }
 
 
+    @org.junit.jupiter.api.Test
+    void testeSoma1() {
+    }
+
+    @org.junit.jupiter.api.Test
+    void testeSubtrai1() {
+    }
+
+    @org.junit.jupiter.api.Test
+    void testeMultiplica1() {
+    }
+
+    @org.junit.jupiter.api.Test
+    void testeDivide1() {
+    }
 }

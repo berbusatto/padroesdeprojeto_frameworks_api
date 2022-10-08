@@ -1,3 +1,5 @@
+package JUNIT.JUNIT.src.test.java;
+
 public class Calcula {
     public double soma(float n1, float n2) {
         return n1 + n2;
