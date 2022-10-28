@@ -13,30 +13,27 @@
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-
-    <dependencies>
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-search-orm -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-search-orm</artifactId>
-            <version>5.8.0.Final</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>8.0.28</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
-        <dependency>
-            <groupId>org.hibernate</groupId>
-            <artifactId>hibernate-entitymanager</artifactId>
-            <version>5.6.5.Final</version>
-        </dependency>
-
-
-    </dependencies>
-
+<dependencies>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>5.6.5.Final</version>
+    </dependency>
+    <!--
+     [<https://mvnrepository.com/artifact/mysql/mysql-connector-java>](<https://mvnrepository.com/artifact/mysql/mysql-connector-java>)
+    -->
+    <dependency>
+        <groupId>mysql</groupId>
+        <artifactId>mysql-connector-java</artifactId>
+        <version>8.0.28</version>
+    </dependency>
+    <!--
+     <https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager>
+    -->
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>5.6.5.Final</version>
+    </dependency>
+</dependencies>
 </project>

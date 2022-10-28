@@ -1,3 +1,5 @@
+package modelo;
+
 import javax.annotation.processing.Generated;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -17,7 +19,7 @@ public class Tarefa {
 
     @Override
     public String toString() {
-        return "Tarefa{" +
+        return "modelo.Tarefa{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", finalizado=" + finalizado +
