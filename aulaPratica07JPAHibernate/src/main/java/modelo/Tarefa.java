@@ -1,11 +1,11 @@
 package modelo;
 
 import javax.annotation.processing.Generated;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.time.LocalDate;
 
 @Entity
+@Table(name="registro_tarefas")
 public class Tarefa {
     @Id
     @GeneratedValue
@@ -14,16 +14,30 @@ public class Tarefa {
     private String descricao;
     private boolean finalizado;
 
+    private LocalDate dataConclusao;
+
+    @Transient
+    private String responsavel;
+
     public Tarefa() {
     }
 
     @Override
     public String toString() {
-        return "modelo.Tarefa{" +
+        return "Tarefa{" +
                 "id=" + id +
                 ", descricao='" + descricao + '\'' +
                 ", finalizado=" + finalizado +
+                ", dataConclusao=" + dataConclusao +
                 '}';
+    }
+
+    public LocalDate getDataConclusao() {
+        return dataConclusao;
+    }
+
+    public void setDataConclusao(LocalDate dataConclusao) {
+        this.dataConclusao = dataConclusao;
     }
 
     public Long getId() {
