@@ -7,7 +7,7 @@ import java.util.Date;
 @Table(name="aluno")
 public class Aluno {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int matricula;
     @Column(length = 100, nullable = false)
     private String nome;

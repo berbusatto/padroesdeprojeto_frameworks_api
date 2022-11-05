@@ -7,7 +7,7 @@ public class GeraTabelas {
     public static void main(String[] args) {
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa_exemplo");
         factory.close();
-        System.out.println("fechando banco");
+        System.out.println("Tabelas Geradas");
     }
 }
 
