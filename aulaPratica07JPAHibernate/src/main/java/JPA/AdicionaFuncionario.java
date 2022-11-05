@@ -30,10 +30,10 @@ public class AdicionaFuncionario {
         funcionario.setEmail("aninha@oiedshao");
         funcionario.setClientes(clientes);
 
-//        System.out.println("--------------------");
-//        TransactionController.transactionAdd(funcionario);
+       System.out.println("--------------------");
+       TransactionController.transactionAdd(funcionario);
 
         System.out.println("--------------------");
-        TransactionController.transactionGet("32309873");
+        TransactionController.transactionGet(funcionario.getCpf());
     }
 }
