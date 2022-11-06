@@ -1,13 +1,8 @@
 package JPA;
 
 import controllers.TransactionController;
-import modelo.Tarefa;
 import modelo2.ClienteEmpresa;
 import modelo2.Funcionario;
-
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import java.util.ArrayList;
 
 public class AdicionaFuncionario {
@@ -30,8 +25,8 @@ public class AdicionaFuncionario {
         funcionario.setEmail("aninha@oiedshao");
         funcionario.setClientes(clientes);
 
-       System.out.println("--------------------");
-       TransactionController.transactionAdd(funcionario);
+        System.out.println("--------------------");
+        TransactionController.transactionAdd(funcionario);
 
         System.out.println("--------------------");
         TransactionController.transactionGet(funcionario.getCpf());
