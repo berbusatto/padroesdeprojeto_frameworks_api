@@ -14,7 +14,7 @@ public abstract class TransactionController {
         manager.getTransaction().begin();
         manager.persist(obj);
         manager.getTransaction().commit();
-        System.out.println("Adicionando funcionário");
+        System.out.println("Adicionado");
         manager.close();
     }
 
@@ -23,7 +23,7 @@ public abstract class TransactionController {
         EntityManager manager = factory.createEntityManager();
 
         Funcionario encontrado = manager.find(Funcionario.class, cpf);
-        System.out.println("Buscando funcionário ->>>" + encontrado.toString());
+        System.out.println("Buscando ->>>" + encontrado.toString());
         manager.close();
         return encontrado;
     }

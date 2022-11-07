@@ -4,31 +4,69 @@ import controllers.TransactionController;
 import modelo2.ClienteEmpresa;
 import modelo2.Funcionario;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class AdicionaFuncionario {
     public static void main(String[] args) {
-        ClienteEmpresa clienteEmpresa1, clienteEmpresa2, clienteEmpresa3;
-        Funcionario funcionario;
-        ArrayList<ClienteEmpresa> clientes = new ArrayList<>();
 
-        clienteEmpresa1 = new ClienteEmpresa("23423431", 1992, "Maria", "maria@fjpod");
-        clienteEmpresa2 = new ClienteEmpresa("8494896", 1980, "Joao", "jojo@aosj");
-        clienteEmpresa3 = new ClienteEmpresa("2135653", 1986, "Jose", "zeze@aosj");
 
-        clientes.add(clienteEmpresa1);
-        clientes.add(clienteEmpresa2);
-        clientes.add(clienteEmpresa3);
 
-        funcionario = new Funcionario();
-        funcionario.setNome("Ana");
-        funcionario.setCpf("32309873");
-        funcionario.setEmail("aninha@oiedshao");
-        funcionario.setClientes(clientes);
 
-        System.out.println("--------------------");
-        TransactionController.transactionAdd(funcionario);
+        Scanner teclado = new Scanner(System.in);
+        String response;
 
-        System.out.println("--------------------");
-        TransactionController.transactionGet(funcionario.getCpf());
+
+        System.out.println("Deseja cadastrar funcionário? S ou N ");
+        response = teclado.nextLine();
+
+        while(response.equalsIgnoreCase("s")){
+            Funcionario funcionario = new Funcionario();
+            ArrayList<ClienteEmpresa> clientes = new ArrayList<>();
+
+            System.out.println("----INSERINDO FUNCIONÁRIO----");
+
+            System.out.println("Nome: ");
+            funcionario.setNome(teclado.nextLine());
+
+            System.out.println("Email: ");
+            funcionario.setEmail(teclado.nextLine());
+
+            System.out.println("CPF");
+            funcionario.setCpf(teclado.nextLine());
+
+            System.out.println("Deseja inserir seus clientes? S ou N ");
+            String response2 = teclado.nextLine();
+
+            while(response2.equalsIgnoreCase("s")){
+                ClienteEmpresa clienteEmpresa = new ClienteEmpresa();
+                System.out.println("----INSERINDO CLIENTE----");
+
+                System.out.println("Nome: ");
+                clienteEmpresa.setNome(teclado.nextLine());
+
+                System.out.println("Email: ");
+                clienteEmpresa.setEmail(teclado.nextLine());
+
+                System.out.println("CPF: ");
+                clienteEmpresa.setCpf(teclado.nextLine());
+
+                System.out.println("Ano Nascimento: ");
+                clienteEmpresa.setAnoNascimento(teclado.nextInt());
+                teclado.nextLine();
+
+                clientes.add(clienteEmpresa);
+
+                System.out.println("Deseja inserir mais clientes? S ou N ");
+                response2 = teclado.nextLine();
+            }
+
+            System.out.println("--------------------");
+            TransactionController.transactionAdd(funcionario);
+
+            System.out.println("Deseja cadastrar mais um funcionário? S ou N ");
+            response = teclado.nextLine();
+
+        }
+
     }
 }
