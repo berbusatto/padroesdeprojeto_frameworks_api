@@ -7,7 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class Aula08ApiApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(Aula08ApiApplication.class, args);
+		System.out.println("------------------------ Executando API ------------------------");
 	}
 
 }
