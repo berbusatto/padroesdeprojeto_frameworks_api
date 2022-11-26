@@ -8,10 +8,6 @@ import java.util.Scanner;
 
 public class AdicionaFuncionario {
     public static void main(String[] args) {
-
-
-
-
         Scanner teclado = new Scanner(System.in);
         String response;
 
@@ -21,6 +17,7 @@ public class AdicionaFuncionario {
 
         while(response.equalsIgnoreCase("s")){
             Funcionario funcionario = new Funcionario();
+
             ArrayList<ClienteEmpresa> clientes = new ArrayList<>();
 
             System.out.println("----INSERINDO FUNCIONÁRIO----");
