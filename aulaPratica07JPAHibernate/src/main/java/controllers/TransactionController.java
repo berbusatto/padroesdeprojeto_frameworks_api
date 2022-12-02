@@ -8,12 +8,14 @@ import javax.persistence.Persistence;
 
 public abstract class TransactionController {
     public static void transactionAdd(Object obj){
+
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa_exemplo");
         EntityManager manager = factory.createEntityManager();
 
         manager.getTransaction().begin();
         manager.persist(obj);
         manager.getTransaction().commit();
+
         System.out.println("Adicionado");
         manager.close();
     }
@@ -27,4 +29,8 @@ public abstract class TransactionController {
         manager.close();
         return encontrado;
     }
+
+
+
+
 }

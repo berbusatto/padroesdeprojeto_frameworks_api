@@ -17,10 +17,7 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="a59af19f-442a-4ebe-93ec-bf16689052ee" object-ref="schemas/jpa_exemplo/tables/funcionario" />
-      <object connection-id="a59af19f-442a-4ebe-93ec-bf16689052ee" object-ref="schemas/jpa_exemplo/tables/clienteempresa" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
     <filter-actions connection-id="a59af19f-442a-4ebe-93ec-bf16689052ee" dataset="jpa_exemplo.funcionario" active-filter-id="EMPTY_FILTER" />
@@ -29,6 +26,8 @@
         <condition column="cpf" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="a59af19f-442a-4ebe-93ec-bf16689052ee" dataset="jpa_exemplo.produto" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="a59af19f-442a-4ebe-93ec-bf16689052ee" dataset="jpa_exemplo.aluno" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
