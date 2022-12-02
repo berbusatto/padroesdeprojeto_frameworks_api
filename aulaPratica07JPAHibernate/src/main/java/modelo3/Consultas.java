@@ -8,6 +8,9 @@ import java.util.List;
 
 public class Consultas {
     public static void main(String[] args) {
+
+        // DEVERIA ESTAR NA TRASNSACTIUON CONTROLLER
+
         EntityManagerFactory factory = Persistence.createEntityManagerFactory("jpa_exemplo");
         EntityManager manager = factory.createEntityManager();
 
@@ -18,5 +21,7 @@ public class Consultas {
             System.out.println(prod.toString());
         }
         manager.close();
+
+
     }
 }
