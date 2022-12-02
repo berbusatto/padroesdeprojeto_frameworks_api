@@ -11,7 +11,6 @@ public class AdicionaFuncionario {
         Scanner teclado = new Scanner(System.in);
         String response;
 
-
         System.out.println("Deseja cadastrar funcionário? S ou N ");
         response = teclado.nextLine();
 
@@ -52,6 +51,7 @@ public class AdicionaFuncionario {
                 teclado.nextLine();
 
                 clientes.add(clienteEmpresa);
+                funcionario.setClientes(clientes);
 
                 System.out.println("Deseja inserir mais clientes? S ou N ");
                 response2 = teclado.nextLine();
