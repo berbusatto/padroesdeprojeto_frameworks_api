@@ -1,6 +1,6 @@
 package JPA;
 
-import modelo.Aluno;
+import modelo.AlunoOLD;
 import modelo.Tarefa;
 
 import javax.persistence.EntityManager;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 
 public class AdicionaAluno {
     public static void main(String[] args) {
-        Aluno aluno1 = new Aluno();
+        AlunoOLD aluno1 = new AlunoOLD();
         aluno1.setNome("Maria Clara Almeida");
         aluno1.setRg("63675658");
         aluno1.setCpf("097320933");
@@ -32,7 +32,7 @@ public class AdicionaAluno {
 
         }
 
-        Aluno aluno2 = new Aluno();
+        AlunoOLD aluno2 = new AlunoOLD();
         aluno2.setNome("Marcos Santana");
         aluno2.setCpf("02850338962");
         aluno2.setRg("26323134");
@@ -50,7 +50,7 @@ public class AdicionaAluno {
         }
 
 
-        Aluno aluno3 = new Aluno();
+        AlunoOLD aluno3 = new AlunoOLD();
         aluno3.setNome("José Santos");
         aluno3.setRg("4578987");
         aluno3.setCpf("73178619");

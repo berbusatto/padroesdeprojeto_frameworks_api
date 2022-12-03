@@ -1,11 +1,10 @@
 package modelo;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
-@Table(name="aluno")
-public class Aluno {
+@Table(name="aluno_old")
+public class AlunoOLD {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private int matricula;
@@ -20,10 +19,10 @@ public class Aluno {
     @Column(nullable = false)
     private int anoNascimento;
 
-    public Aluno() {
+    public AlunoOLD() {
     }
 
-    public Aluno(int matricula, String cpf, String rg, String nome, String email, int anoNascimento) {
+    public AlunoOLD(int matricula, String cpf, String rg, String nome, String email, int anoNascimento) {
 
         this.matricula = matricula;
         this.cpf = cpf;

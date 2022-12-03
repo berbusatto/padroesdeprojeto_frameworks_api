@@ -52,8 +52,5 @@ public class Principal {
         batata.setPreco(8.50);
         TransactionController.transactionAdd(batata);
 
-
-
-
     }
 }

@@ -21,7 +21,5 @@ public class Consultas {
             System.out.println(prod.toString());
         }
         manager.close();
-
-
     }
 }
